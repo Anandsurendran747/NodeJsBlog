@@ -1,0 +1,21 @@
+<div class="container">
+    <section>
+        <div style="text-align: center;margin-top: 15vh;">
+            <h1>Contact Me</h1>
+            <form  id="contactForm"  >
+                {{#if loggedUser.loggedIn}}
+                <input class="contactinput" name="Name" placeholder="Enter Your Name" value="{{loggedUser.name}}" type="text"><br>
+                <input class="contactinput"   name="Email" placeholder="Enter Your Email" value="{{loggedUser.email}}" type="email"><br>
+                <input class="contactinput"  name="Number"  placeholder="Enter Your Phone Number" type="number"><br>
+                {{else}}
+                <input class="contactinput" name="Name" placeholder="Enter Your Name" type="text"><br>
+                <input class="contactinput" name="Email" placeholder="Enter Your Email" type="email"><br>
+                <input class="contactinput" name="Number"  placeholder="Enter Your Phone Number" type="number"><br>
+                {{/if}}
+                <textarea placeholder="Your Message" class="contacttextarea" name="matter" id="" cols="30" rows="10"></textarea><br> 
+                <button style="background-color:rgb(54, 51, 51) ;color: antiquewhite;padding: 5px;border-radius: 5px;" onclick="contactMe()" >submit</button>
+            </form>
+            {{>authentication}}
+        </div>
+    </section>
+</div>

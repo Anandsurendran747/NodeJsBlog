@@ -1,0 +1,107 @@
+<div id="loginForm1">
+
+  <div class="modal-contents">
+    <div class="close" onclick="closeLogin()">+</div>
+    <img src="https://richardmiddleton.me/comic-100.png" alt="" />
+
+    <div id="invalidDiv" style="display: none;color: crimson;"><h2>Invalid
+        Username or Password</h2></div>
+    <div style="text-align: center;margin-top: 5vh;"><h1>LogIn</h1></div>
+    <form  id="userLoginForm"  >
+
+      <div style="margin-top: 10vh;width: 100%;">
+        <input
+          required
+          name="username"
+          placeholder="Enter Your Username"
+          style="height: 35px;width: 60%;"
+          type="text"
+        /></div>
+
+      <div style="margin-top: 3vh;">
+        <input
+          required
+          name="password"
+          placeholder="Enter Password"
+          style="width: 60%;height: 35px;"
+          type="password"
+        /></div>
+      <input id="url" style="visibility: hidden;" name="url" type="text" />
+
+      <div style="text-align: center;margin-top: 3vh;"><button
+          style="background-color: black;color: white;"
+          class="btn"
+          
+          onclick="userLogin()"
+        >Login</button></div>
+    </form>
+    <div>
+      <h3>If you are a new user Please SignUp</h3>
+      <a
+        href="#"
+        class="btn"
+        style="background-color: black;color: white;"
+        onclick="signUp()"
+      >Signup</a>
+    </div>
+
+  </div>
+</div>
+
+<div id="signupForm1">
+  <div class="modal-contents">
+    <div class="close" onclick="closesignup()">+</div>
+    <img src="https://richardmiddleton.me/comic-100.png" alt="" />
+
+    <div style="text-align: center;margin-top: 5vh;"><h1>SignUp</h1></div>
+    <form id="userSignupForm">
+      <div style="margin-top: 10vh;width: 100%;">
+        <input
+          required
+          name="email"
+          placeholder="Enter Your Email"
+          style="width: 60%;height: 35px;"
+          type="email"
+        /></div>
+      <div style="margin-top: 3vh;">
+        <input
+          required
+          name="name"
+          placeholder="Enter Your Name"
+          style="width: 60%;height: 35px;"
+          type="text"
+        /></div>
+      <div style="margin-top: 3vh;">
+        <input
+          required
+          name="username"
+          placeholder="Enter Your username"
+          style="width: 60%;height: 35px;"
+          type="text"
+        /></div>
+      <div style="margin-top: 3vh;">
+        <input
+          required
+          name="password"
+          placeholder="Enter Password"
+          style="width: 60%;height: 35px;"
+          type="text"
+        /></div>
+
+      <div style="text-align: center;margin-top: 3vh;"><button
+          style="background-color: black;color: white;"
+          class="btn"
+          onclick="userSignup()"
+        >SignUp</button></div>
+    </form>
+    <div>
+      <h3>If you Already have an Account Please Login</h3>
+      <a
+        href="#"
+        class="btn"
+        style="background-color: black;color: white;"
+        onclick="login()"
+      >Login</a>
+    </div>
+  </div>
+</div>

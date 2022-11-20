@@ -1,0 +1,37 @@
+<section>
+      
+  <div class="container">
+    <button id="addImg" onclick="addImg()">Add Image/Video</button>
+    <button id="addImg" onclick="addHeader()">Add Header</button>
+    <button id="addImg" onclick="addSubHeader()">Add Sub Header</button>
+    <button id="addImg" onclick="addParagraph()">Add Paragraph</button>
+    {{!-- <button id="addImg" onclick="addFooterParagraph()">Add footer Paragrapg</button> --}}
+    <button id="addImg" onclick="addCode()">Add Code</button>
+    {{!-- <button id="addImg" onclick="addSession()">Add Session</button> --}}
+    <div style="width: 100%;height: fit-content;margin-top: 10vh;border:1px solid black;">
+      <form  id="blogForm" method="POST" enctype="multipart/form-data">
+        <div id="form"  >
+          <div style="width: 100%;text-align: center;margin-bottom: 5vh;margin-top: 2vh;">
+            
+            <input placeholder="Title" name="title" type="text" /><br />
+          </div>
+          <div style="margin-bottom: 2vh;">
+            
+            <input placeholder="Description" name="description" style="width: 80%;margin-left: 10%;" type="text" /><br />
+          </div>
+          
+        </div>
+       
+        <div class="submit" style="text-align: center;margin-top: 3vh;margin-bottom: 2vh;">
+          <button  type="submit">Submit</button>
+        </div>
+        
+      </form>
+    </div>
+
+  </div>
+
+</section>
+<script>
+
+</script>

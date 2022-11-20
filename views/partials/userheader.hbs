@@ -1,0 +1,112 @@
+<section id="firstdiv">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      {{!-- <a class="navbar-brand" href="#">Anand Logo</a> --}}
+      <img
+            src="/images/myphoto.png"
+            alt=""
+            style="width: 40px;border-radius: 40%;height: 6vh;margin-right: 5vw;"
+          />
+      
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        style="color: black;"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+           <li class="nav-item">
+            <a class="nav-link active" style="color: black;font-weight: 700;" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="color: black;font-weight: 700;" href="/contact" >Contact Me</a>
+          </li>
+          {{!-- {{#if loggedUser.loggedIn}} --}}
+          
+          <li class="nav-item">
+            <a class="nav-link" style="color: black;font-weight: 700;" href="/services" >Services</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link"  style="color: black;font-weight: 700;" href="/blogs" >Blogs</a>
+          </li>
+          {{!-- {{else}}
+           
+          <li class="nav-item">
+            <a class="nav-link"  style="color: black;font-weight: 700;"  onclick="login('/services')">Services</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link"  style="color: black;font-weight: 700;"  onclick="login('/blogs')">My Blogs</a>
+          </li>
+              
+          {{/if}} --}}
+          
+          
+        </ul>
+        <div class="login">
+          {{#if loggedUser.loggedIn}}
+            <div class="dropdown" style="margin-right: 5rem;">
+          <button
+            class="btn btn-secondary dropdown-toggle"
+            type="button"
+            id="dropdownMenuButton1"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+          
+            
+            
+              {{loggedUser.name}}
+            
+            
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" style="height: fit-content;">
+             
+            <li><a class="dropdown-item" href="/logout">Logout</a></li>
+            
+            
+            
+          </ul>
+        </div>
+        {{else}}
+          <a  href="#" class="loginbutton" id="accessbutton2" onclick="signUp()">Signup</a>
+            <a id="accessbutton1" href="#" class="loginbutton" onclick="login()">Login</a>
+        {{/if}}
+        
+      </div>
+        <form action="/searchBlog" class="d-flex" method="GET">
+          <input
+            name="search"
+            class="form-control me-2"
+            type="search"
+            placeholder="Search For Blogs"
+            aria-label="Search"
+          />
+          
+          <button class="searchbutton" type="submit">Search</button>
+          
+        </form>
+
+        
+      </div>
+      
+
+
+
+      
+    </div>
+  </nav>
+
+  <div class="container">
+
+  </div>
+</section>

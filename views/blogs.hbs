@@ -1,0 +1,91 @@
+<section>
+  <div
+    style="width: 100%;text-align: center;margin-top: 2vh;margin-bottom: 5vh;"
+  >
+    <h2>Blogs</h2>
+
+  </div>
+    
+      
+      
+    
+    
+    {{#if blogs}}
+        {{#if admin}}
+      <ol class="list-group list-group-numbered">
+    {{#each blogs}}
+      
+      <div class="row" style="margin-bottom: 2vh;">
+        <div class=" col-sm-9 col-md-9 col-lg-10 col-xl-11" style="margin: 0;padding: 0;">
+          <li onclick="fullIvew('{{this._id}}','{{../admin}}')"
+        
+        class="blogs list-group-item d-flex justify-content-between align-items-start"
+      >
+        <div class="ms-2 me-auto">
+          <div class="fw-bold">{{this.title}}</div>
+          {{this.description}}
+        </div>
+        {{!-- <div
+          class="blogviewbutton"
+          style="width: 60%;text-align: center;visibility: hidden;"
+        > --}}
+        
+        
+        {{!-- {{#if ../user}}
+        <a href="/blogfullview/{{this._id}}" class="btn"style="background-color:rgb(54, 51, 51) ;color: white;">Full View</a>       
+        {{/if}} --}} 
+        
+      </li>
+        </div>
+      <div class="col-sm-3 col-md-3 col-lg-2 col-xl-1" style="margin: 0;padding: 0;">
+        
+        <button onclick="deleteBlog('{{this._id}}')" class="btn "style="background-color:rgb(54, 51, 51) ;color: white;width: 100%;height: 100%;">Delete Blog</button>
+        
+      </div>
+      </div>
+      
+    {{/each}}
+    </ol>
+    {{else}}
+      <ol class="list-group list-group-numbered">
+    {{#each blogs}}
+      
+        
+          <li onclick="fullIvew('{{this._id}}','{{../admin}}')"
+        class="blogs list-group-item d-flex justify-content-between align-items-start">
+        
+        <div class="ms-2 me-auto">
+          <div class="fw-bold">{{this.title}}</div>
+          {{this.description}}
+        </div>
+        {{!-- <div
+          class="blogviewbutton"
+          style="width: 60%;text-align: center;visibility: hidden;"
+        > --}}
+        
+        
+        {{!-- {{#if ../user}}
+        <a href="/blogfullview/{{this._id}}" class="btn"style="background-color:rgb(54, 51, 51) ;color: white;">Full View</a>       
+        {{/if}} --}} 
+        
+      </li>
+      
+        
+      
+      
+      
+    {{/each}}
+    </ol>
+    {{/if}}
+
+
+
+    {{else}}
+      <div style="text-align: center;">
+        <h1>No Blogs</h1>
+      </div>
+    {{/if}}
+    
+  
+</section>
+    {{>authentication}}

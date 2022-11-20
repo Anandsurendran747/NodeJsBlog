@@ -1,0 +1,168 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.home{
+  width: 100%;
+  height: fit-content;
+  background-color:white;
+  margin-bottom: 10px;
+}
+
+#button {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+.container-fluid{
+  scroll-behavior: smooth;
+}
+.text-box{
+  font-size :80px; 
+  /* text-align: center; */
+  font-family: Brush Script MT, Brush Script Std, cursive;
+
+}
+.text-box2{
+  font-size :5vw; 
+  /* text-align: center; */
+  font-family: Brush Script MT, Brush Script Std, cursive;
+
+}
+/* .center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -25px 0 0 -25px;
+} */
+.ml3 {
+  width: 100%;
+  font-weight: 600;
+  font-size: 3.5em;
+}
+.loginbutton{
+  background-color: rgb(0, 0, 0);
+  color: rgb(253, 253, 253);
+  border-radius: 10%;
+  padding: 5px;
+}.searchbutton{
+  background-color: white;
+  color: rgb(53, 68, 68);
+  border-radius: 10%;
+  padding: 5px;
+}
+.login{
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.language{
+  color: #f8f8f2;
+  
+}
+/* .code-toolbar{
+  /* width: 100%;
+ width: ;
+  height: fit-content; */
+  /* width: fit-content;
+  height: fit-content; */
+  /* display: block;
+  overflow: auto;
+  background-color: black;
+  
+} */ */
+.copybutton{
+  
+  
+  border-radius: 5px;
+}
+.contactinput{
+  width: 100%;
+  height: 40px;
+  margin-bottom: 3vh;
+  padding-left: 5px;
+  padding-right: 5px;
+}.contacttextarea{
+  width: 100%;
+  max-height: fit-content;
+  min-height: 70px;
+  height: 100px;
+  margin-bottom: 5vh;
+  padding-left: 5px;
+  padding-right: 5px;
+  
+}
+#signupForm1,#signupForm2{
+  background-color: #ffffff00;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: auto;
+  height: auto;
+	/* height: 100%; overflow: auto;*/
+	
+	
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+
+
+
+#loginForm1,#loginForm2 {
+	background-color: #ffffff00;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: auto;
+  height: auto;
+	/* height: 100%; overflow: auto;*/
+	
+	
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+
+
+
+.modal-contents {
+  border: 1px solid;
+	height:fit-content;
+	width: 500px;
+  max-width: 90%;
+	background-color: rgb(255, 255, 255);
+	text-align: center;
+	padding: 20px;
+	position: relative;
+	border-radius: 4px;
+}
+
+.popinput {
+	margin: 15px auto;
+	display: block;
+	width: 50%;
+	padding: 8px;
+	border: 1px solid gray;
+}
+
+.close {
+	position: absolute;
+	top: 0;
+	right: 10px;
+	font-size: 42px;
+	color: #333;
+	transform: rotate(45deg);
+	cursor: pointer;
+  
+}
+

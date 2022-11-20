@@ -1,0 +1,89 @@
+<div class="container">
+  
+  <section class="home" id="home">
+    
+    <div  class="text" style="text-align: center;margin-top: 5vh;">
+      {{!-- <h1 class="ml3">Welcome  {{loggedUser.name}}</h1> --}}
+      <div class="ml3 ">
+        <h1 >Welcome {{loggedUser.name}}</h1>
+        
+      </div>
+      
+    </div>
+    <div class="introtext" style="text-align: center;margin-top: 10vh;">
+      <h3>
+        "You can never understand everything,<br />but You should push yourself<br
+        />to understand the System"<br />
+        - Ryan Dahl (Creator of Node JS)
+
+      </h3>
+    </div>
+    <div class="row " style="height: fit-content;">
+      <div  class="col-xs-12 card" style="padding: 2vh;height: fit-content;margin-bottom: 5vh;margin-top: 3vh;">
+        <div class="row" style="border: 1px solid;padding: 2vh;border-radius: 5px;">
+          <div class="col-xs-12 col-sm-6 "  >
+            <img src="/images/myblog-pic.jpg" class="card-img-top" alt="..." style="width: 100%;height: 30vh;" />
+          </div>
+          <div class="col-xs-12 col-sm-6 " style="text-align: center;">
+            <h5 class="card-title">Blogs</h5>
+            
+              <p class="card-text" >These blogs will help you to lern about
+              programming concepts And devolpment  of web apps.</p>
+           
+            
+              <a href="/blogs" class="btn btn-primary" style="background-color: rgb(54, 51, 51);">GO to Blogs</a>
+            
+          </div>
+        </div>
+        
+      </div>
+      <div  class="col-xs-12 card" style="padding: 2vh;height: fit-content;margin-bottom: 5vh;">
+        <div class="row" style="border: 1px solid;padding: 2vh;border-radius: 5px;">
+          <div class="col-xs-12 col-sm-6 " style="text-align: center;" >
+            <h5 class="card-title">Services</h5>
+            
+              <p class="card-text">My service Include all works related to a static or dinamic website that will give you 100% satisfaction.
+            </p>
+            
+              <a href="/services" class="btn btn-primary" style="background-color: rgb(54, 51, 51);margin-bottom: 2vh;">GO to Services</a>
+            
+          </div>
+          <div class="col-xs-12 col-sm-6 ">
+            <img src="/images/service.jpg" class="card-img-top" alt="..." style="width: 100%;height: 30vh;" />
+          </div>
+          
+        </div>
+        
+      </div>
+      <div  class="col-xs-12 card" style="padding: 2vh;height: fit-content;margin-bottom: 5vh;">
+        <div class="row" style="border: 1px solid;padding: 2vh;border-radius: 5px;">
+          <div class="col-xs-12 col-sm-6 "  >
+            <img src="/images/conatct.jpg" class="card-img-top" alt="..." style="width: 100%;height:30vh;" />
+          </div>
+          <div class="col-sm-6 " style="text-align: center;">
+            <h3 class="card-title">Contact</h3>
+            
+              <p class="card-text">Conatct me for getting more information about my services or to ask any doubt related to my blogs.</p>
+           
+            
+              <a href="/contact" class="btn btn-primary" style="background-color: rgb(54, 51, 51);">Contact Me</a>
+            
+          </div>
+        </div>
+        
+      </div>
+      
+      
+      
+    </div>
+    
+  </section>
+  
+  {{>authentication}}
+
+</div>
+<div style="width: 100%;background-color: rgb(54, 51, 51);color: aliceblue;text-align: center;padding: 10px;">copyrighted by Anand S
+  <a target="_blank" href=""><img style="width: 40px;height: 3vh;border-radius: 5px;margin-left: 3vw;margin-right: 1vw;"  src="/images/insta.jpg" alt=""></a>
+  <a target="_blank" href=""><img style="width: 40px;height: 3vh;border-radius: 5px;margin-right: 1vw;"  src="/images/fb.jpg"  alt=""></a>
+  <a target="_blank" href=""><img style="width: 40px;height: 3vh;border-radius: 5px;" onclick="" src="/images/linkedin.jpg" alt=""></a>
+</div>

@@ -1,0 +1,47 @@
+<section>
+  <div
+    style="width: 100%;text-align: center;margin-top: 2vh;margin-bottom: 5vh;"
+  >
+    <h2>Blogs</h2>
+
+  </div>
+    {{#if searchblogs}}
+      <div style="margin-bottom: 10vh;">
+      <div style="text-align: center;"><h1>Your Search Results for "{{query}}"</h1></div>
+    <ol class="list-group list-group-numbered">
+    {{#each searchblogs}}
+      
+        
+          <li onclick="fullIvew('{{this._id}}','{{../admin}}')"
+        class="blogs list-group-item d-flex justify-content-between align-items-start">
+        
+        <div class="ms-2 me-auto">
+          <div class="fw-bold">{{this.title}}</div>
+          {{this.description}}
+        </div>
+        {{!-- <div
+          class="blogviewbutton"
+          style="width: 60%;text-align: center;visibility: hidden;"
+        > --}}
+        
+        
+        {{!-- {{#if ../user}}
+        <a href="/blogfullview/{{this._id}}" class="btn"style="background-color:rgb(54, 51, 51) ;color: white;">Full View</a>       
+        {{/if}} --}} 
+        
+      </li>
+      
+        
+      
+      
+      
+    {{/each}}
+    </ol>
+    </div>
+    {{else}}
+        <div style="text-align: center;"><h1>No results for "{{query}}"</h1></div>
+    {{/if}}
+    </div>
+    </div>
+     {{>authentication}}
+</section>

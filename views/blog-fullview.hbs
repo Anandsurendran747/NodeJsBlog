@@ -1,0 +1,59 @@
+<section>
+    <div class="container" >
+        {{#if admin}}
+        <a class="btn btn-primary" href="/admin/editBlogPage/{{blog._id}}">editBlog</a>
+         <a class="btn btn-primary" href="/admin/showBlogs">Go To Blogs</a>
+         {{else}}
+         <a style="margin-top: 2vh;background-color: black;margin-bottom: 2vh;" class="btn btn-primary" href="/blogs">Go To Blogs</a>
+        {{/if}}
+        
+        <div style="text-align: center;">
+            <h1>{{blog.title}}</h1>
+            
+        </div>
+        
+        
+        {{#each blog.steps}}
+                {{#if this.0.header}}
+                    <h1 style="margin-top: 2vh;margin-bottom: 3vh;">{{this.0.header}}</h1>
+                {{/if}}
+                {{#if this.0.subheader}}
+                    <h3 style="margin-top: 2vh;margin-bottom: 2vh;">{{this.0.subheader}}</h3>
+                {{/if}}
+                {{#if this.0.paragraph}}
+                    <p>{{this.0.paragraph}}</p>
+                {{/if}}
+                {{#if this.0.image}}
+                    <div style="text-align: center;width: 100%;margin-top: 5vh;padding-bottom: 5vh;"><img style="max-width: 100%;max-height: 30vh;" src="{{this.0.image}}" alt=""></div>
+                {{/if}}
+                {{#if this.0.code}}
+                    <div class="" style="padding-left: 20px;background-color: black;margin-top: 3vh;margin-bottom: 2vh;">
+                        <div id="copybody" style="margin: 0;padding: 0;margin-left: 10px;text-align: right;"><button id="copybutton{{@index}}" onclick="copyToClipBoard(`copytext{{@index}}`,`copybutton{{@index}}`)"  style="margin-right: 10px;margin-top: 2px;border-radius: 5px;padding: 0px 5px;">copy</button></div>
+                        <pre style="color: white;">
+                            <p id="copytext{{@index}}" class="code">{{this.0.code}}</p>
+                        </pre>
+                    </div> 
+                {{/if}}
+        {{/each}}
+        
+    </div>
+    </div>
+    
+    {{>authentication}}
+
+    
+    
+</section>
+<script>
+    
+    if(!'{{loggedUser.loggedIn}}'){
+        setTimeout(function() {
+        var elmnt = document.getElementById("firstdiv");
+        elmnt.scrollIntoView();
+        login('/blogfullview/{{blog._id}}')
+    }, 10000);
+    }
+
+    
+</script>
+
