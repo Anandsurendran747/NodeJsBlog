@@ -43,10 +43,6 @@ db.connect((err)=>{
   else{
     console.log('Database connected');
   } 
-}).then(() => {
-  app.listen(process.env.PORT, () => {
-      console.log("listening for requests");
-  })
 })
 
 // error handler
