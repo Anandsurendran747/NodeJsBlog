@@ -161,6 +161,7 @@ router.get('/searchBlog', (req, res) => {
     userhelper.findBlog(req.query.search).then((response) => {
       var blogs = response.blogs
       var searchblogs = response.searchblogs
+      console.log(searchblogs);
       if (searchblogs.length > 0) {
         res.render('searchBlog', { user: true, searchblogs: searchblogs, loggedUser: loggedUser, query: req.query.search })
       } else {

@@ -66,7 +66,7 @@ module.exports={
         return new Promise(async(resolve,reject)=>{
             var querytext=query.toLowerCase() 
             console.log(querytext);
-            const result = { title:{$regex:querytext,$options:'$i'} };
+            const result = { title:{$regex:querytext,$options:'i'} };
             var blog=await db.get().collection(collections.BLOG_COLLECTION).find().toArray()
             var searchblogs=await db.get().collection(collections.BLOG_COLLECTION).find(result).toArray()
             var response={
