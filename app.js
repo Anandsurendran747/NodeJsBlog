@@ -8,9 +8,10 @@ var hbs=require('express-handlebars')
 const session=require('express-session')
 var adminRouter = require('./routes/admin');
 var usersRouter = require('./routes/users');
-var db=require('./mongo-connection/dbconnection');
+// var db=require('./mongo-connection/dbconnection');
 const { handlebars } = require('hbs');
-const hnadle=require('./helper/handlebar-helper')
+const hnadle=require('./helper/handlebar-helper');
+const { log } = require('console');
 
 var app = express();
 console.log("app start");
@@ -36,16 +37,16 @@ app.use(function(req, res, next) {
   next(createError(404));
 });
 
-db.connect((err)=>{
-  if(err){
-    console.log('Database not connected'+err);
-  } 
-  else{
-    console.log('Database connected');
-  } 
-})
+// db.connect((err)=>{
+//   if(err){
+//     console.log('Database not connected'+err);
+//   } 
+//   else{
+//     console.log('Database connected');
+//   } 
+// })
 
-// error handler
+// // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
@@ -55,5 +56,9 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+// app.listen(5000 || process.env.PORT,()=>{
+//   console.log("server taz");
+// })
 
 module.exports = app;

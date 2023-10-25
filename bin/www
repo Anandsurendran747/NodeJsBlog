@@ -3,7 +3,7 @@
 /**
  * Module dependencies.
  */
-
+var db=require('../mongo-connection/dbconnection');
 var app = require('../app');
 var debug = require('debug')('new-blog-app:server');
 var http = require('http');
@@ -24,8 +24,16 @@ var server = http.createServer(app);
 /**
  * Listen on provided port, on all network interfaces.
  */
+db.connect((err)=>{
+  if(err){
+    console.log('Database not connected'+err);
+  } 
+  else{
+    server.listen(port);
+    console.log('Database connected');
+  } 
+})
 
-server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
 
