@@ -1,6 +1,5 @@
 const { response } = require('express');
 var express = require('express');
-const { path } = require('../app');
 var router = express.Router();
 var userhelper = require('../helper/user-helper')
 

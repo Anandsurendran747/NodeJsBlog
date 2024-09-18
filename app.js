@@ -8,9 +8,7 @@ var hbs=require('express-handlebars')
 const session=require('express-session')
 var adminRouter = require('./routes/admin');
 var usersRouter = require('./routes/users');
-// var db=require('./mongo-connection/dbconnection');
 const { handlebars } = require('hbs');
-const hnadle=require('./helper/handlebar-helper');
 const { log } = require('console');
 
 var app = express();
@@ -30,6 +28,11 @@ app.use(fileUpload());
 app.use('/', usersRouter);
 app.use('/admin', adminRouter);
 app. engine( 'hbs', hbs( { extname: 'hbs', defaultLayout: 'layout', layoutsDir: __dirname + '/views/layout/', partialsDir: __dirname + '/views/partials/' } ) );
+
+
+
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

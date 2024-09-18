@@ -1,7 +1,6 @@
 const { response } = require('express');
 const handle=require('handlebars')
 const adminhelper=require('../helper/admin-helper');
-const { options } = require('../routes/users');
 // const { htmlToText } = require('html-to-text');
 // var i=0;
 // handle.registerHelper('sample',function(blog){

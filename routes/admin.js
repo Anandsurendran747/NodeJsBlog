@@ -2,9 +2,9 @@ var express = require('express');
 var router = express.Router();
 const adminhelper=require('../helper/admin-helper')
 const jsdom = require("jsdom");
-var user=require('./users')
+// var user=require('./users')
 const verifyLogin=(req,res,next)=>{
-  console.log(user.ad);
+  // console.log(user.ad);
   if(req.session.adminLogin){
     console.log('admin logged in');
     next()
